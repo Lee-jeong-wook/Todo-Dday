@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+*{
+  list-style: none;
 }
 
 .App-logo {
@@ -12,27 +12,119 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  >img{
+    height: 80px;
+  }
+}
+.main{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+nav{
+  position:fixed;
+  width:300px;
+  height:500px;
+  top:10%;
+  right:3%;
+  background-color: #D6EEE8;
+  border-radius: 30px;
+}
+.todoScreen{
+  width: 60%;
+}
+.todoForm{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  >div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    >.todo-row-complete{
+      display: flex;
+      text-decoration: line-through;
+      color:gray;
+    }
+    >div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10%;
+      >.btnWrap{
+        display: flex;
+        justify-content: space-around;
+        width: 150px;
+      }
+      >div{
+        display: flex;
+      }
+    }
+  }
+}
+button{
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.cancleEdit{
+  background-color: #d00;
+}
+.editing{
+  color: black;
+  background-color: #fff;
+}
+.edited{
+  background-color: #0d0;
+}
+.delete{
+  background-color: #81B0A8;
+}
+.todoHeader{
+  color :#7DB97F;
+}
+.helmetImg{
+  width: 30px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.addDday{
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.close{
+  float: right;
+  cursor: pointer;
+}
+
+.dDaySubmit{
+  width: 100px;
+  background-color: #72CCC7;
+  font-size: 20px;
+}
+
+.titleInput{
+  border: 0 solid #000;
+  border-bottom: 1px solid #000;
+  width: 80%;
+  text-overflow: ellipsis;
+}
+
+ul{
+  margin: 0px;
+  padding: 0;
+  >li{
+    height: 30px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.deleteDday{
+  display: inline-block;
+  width: 20px;
+  cursor: pointer;
 }
